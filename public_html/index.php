@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Peter Piper's Pickled Peppers</title>
@@ -12,7 +11,7 @@
         <h1>Peter sells peppers</h1>
 	<div class="subtitle-div">
 		Suppliers of the universe's best peppers money can buy.
-                
+
                 <? php
                     echo "dicks";
                 ?>
@@ -33,7 +32,7 @@
             <tbody>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/guantanamo.html'>                            
+                    <a href='peppers/guantanamo.html'>
                     <img src='images/guan-pepper.jpg'
                                  alt='Guantanamo Pepper'
                                  width='250'
@@ -48,7 +47,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/assorted.html'>                            
+                    <a href='peppers/assorted.php'>
                     <img src='images/assorted_pepper.png'
                                  alt='Assorted Peppers'
                                  width='250'
@@ -63,7 +62,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/ghost.html'>                            
+                    <a href='peppers/ghost.html'>
                     <img src='images/ghost_pepper.png'
                                  alt='Ghost Pepper'
                                  width='250'
@@ -78,7 +77,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/pepperocini.html'>                            
+                    <a href='peppers/pepperocini.html'>
                     <img src='images/pepperocini.png'
                                  alt='Pepperocini'
                                  width='250'
@@ -93,7 +92,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/purple.html'>                            
+                    <a href='peppers/purple.html'>
                     <img src='images/purple_pepper.png'
                                  alt='Purple Pepper'
                                  width='250'
@@ -108,7 +107,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/reaper.html'>                            
+                    <a href='peppers/reaper.html'>
                     <img src='images/reaper_pepper.png'
                                  alt='Reaper Pepper'
                                  width='250'
@@ -123,7 +122,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/red_bell.html'>                            
+                    <a href='peppers/red_bell.html'>
                     <img src='images/red_bell_pepper.png'
                                  alt='Red Bell Pepper'
                                  width='250'
@@ -138,7 +137,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/devil.html'>                            
+                    <a href='peppers/devil.html'>
                     <img src='images/devil_pepper.jpg'
                                  alt='Devil Pepper'
                                  width='250'
@@ -153,7 +152,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/white.html'>                            
+                    <a href='peppers/white.html'>
                     <img src='images/white_pepper.jpg'
                                  alt='White Pepper'
                                  width='250'
@@ -168,7 +167,7 @@
                 </tr>
                 <tr>
                     <td><div class='hover-img'>
-                    <a href='peppers/triad.html'>                            
+                    <a href='peppers/triad.html'>
                     <img src='images/yellow_triad.jpg'
                                  alt='Orange Triad Pepper'
                                  width='250'

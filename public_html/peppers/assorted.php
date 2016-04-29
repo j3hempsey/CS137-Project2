@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    require_once "../php/form.php"
+?>
 <html>
     <head>
         <title>Peter Sells Peppers - Assorted Peppers</title>
@@ -26,18 +28,18 @@
                                 </div>
                                 <div class='product-img'>
                 <img src='../images/assorted_pepper1.jpeg' alt='Guantanamo Pepper'
-                    height="180" width="300" > 
+                    height="180" width="300" >
                                 </div>
                                 </td>
                         </tr>
                     </tbody>
-                </table>   
+                </table>
             </div>
             <div class="prod-detail inline">
                 <div class='description'>
-                So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.  
+                So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.
                             </div>
-            <div class='price'> 
+            <div class='price'>
                 Price: $4.99
             </div>
             </div>
@@ -45,6 +47,7 @@
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();'>
+                <input type="hidden" name="action" value="buy"/>
                 <table class='ship-form'>
                     <tbody>
                         <tr>
@@ -96,7 +99,7 @@
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="state-bad"></img>
 							</td>
                         </tr>
-                        <tr> 
+                        <tr>
                             <td>Quantity:</td>
                             <td><input type="text" class="in_txt" id="quantity" onkeyup="checkQuantityWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="quantity-good"></img>
@@ -120,7 +123,7 @@
                 </div>
             </form>
         </div>
-        
+
         <br><br>
                 <div class='center-div' id='management' >
                     <a href='../management/management.html'>Management Team</a> | <a href='/index.html'>Home</a>
