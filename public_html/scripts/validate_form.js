@@ -1,3 +1,101 @@
+//Input listeners.
+function checkFirstNameWhileTyping()
+{
+  if(checkName(document.getElementById("first-name").value)) {
+	$("#first-name-good").addClass('hidden');
+	$("#first-name-bad").removeClass('hidden');
+  }
+  else {
+	$("#first-name-good").removeClass('hidden');
+	$("#first-name-bad").addClass('hidden');
+  }
+}
+
+function checkLastNameWhileTyping()
+{
+  if(checkName(document.getElementById("last-name").value)) {
+  	$("#last-name-good").addClass('hidden');
+	$("#last-name-bad").removeClass('hidden');
+  }
+  else {
+    $("#last-name-good").removeClass('hidden');
+	$("#last-name-bad").addClass('hidden');
+  }
+}
+
+function checkCreditCardWhileTyping()
+{
+  if(checkCard(document.getElementById("credit-card").value)) {
+  	$("#credit-card-good").addClass('hidden');
+	$("#credit-card-bad").removeClass('hidden');
+  }
+  else {
+    $("#credit-card-good").removeClass('hidden');
+	$("#credit-card-bad").addClass('hidden');
+  }
+}
+
+function checkAddressWhileTyping()
+{
+  if(checkAddress(document.getElementById("address").value)) {
+  	$("#address-good").addClass('hidden');
+	$("#address-bad").removeClass('hidden');
+  }
+  else {
+    $("#address-good").removeClass('hidden');
+	$("#address-bad").addClass('hidden');
+  }
+}
+
+function checkPhoneWhileTyping()
+{
+  if(checkPhone(document.getElementById("last-name").value)) {
+  	$("#phone-good").addClass('hidden');
+	$("#phone-bad").removeClass('hidden');
+  }
+  else {
+    $("#phone-good").removeClass('hidden');
+	$("#phonee-bad").addClass('hidden');
+  }
+}
+
+function checkZipCodeWhileTyping()
+{
+  if(checkZip(document.getElementById("zip-code").value)) {
+  	$("#zip-code-good").addClass('hidden');
+	$("#zip-code-bad").removeClass('hidden');
+  }
+  else {
+    $("#zip-code-good").removeClass('hidden');
+	$("#zip-code-bad").addClass('hidden');
+  }
+}
+
+function checkStateWhileTyping()
+{
+  if(checkState(document.getElementById("state").value)) {
+    $("#state-good").addClass('hidden');
+	$("#state-bad").removeClass('hidden');
+  }
+  else {
+    $("#state-good").removeClass('hidden');
+	$("#state-bad").addClass('hidden');
+  }
+}
+
+function checkQuantityWhileTyping()
+{
+  if(checkQuantity(document.getElementById("quantity").value)) {
+  	$("#quantity-good").addClass('hidden');
+	$("#quantity-bad").removeClass('hidden');
+  }
+  else {
+    $("#quantity-good").removeClass('hidden');
+	$("#quantity-bad").addClass('hidden');
+  }
+}
+
+//Input Regex.
 function checkEmail(email)
 {
 	var regex = /^([a-zA-Z0-9_.-])+@(a-zA-Z0-9_.-)+\.(a-zA-Z])/;
@@ -46,6 +144,7 @@ function checkQuantity(quantity)
 	return regex.test(quantity);
 }
 
+//Main Check.
 function processForm()
 {
 	var first_name = document.getElementById("first-name");
@@ -113,5 +212,3 @@ function processForm()
 
 var form = document.getElementById("order-form");
 form.onSubmit = processForm;
-
-

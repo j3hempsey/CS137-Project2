@@ -157,6 +157,10 @@ table.ship-form tbody tr td{
     width: 20%;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .order {
     clear: both;
     width: 100%;
