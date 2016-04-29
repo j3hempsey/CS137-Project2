@@ -161,6 +161,12 @@ table.ship-form tbody tr td{
   visibility: hidden;
 }
 
+.overlay {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 .order {
     clear: both;
     width: 100%;
