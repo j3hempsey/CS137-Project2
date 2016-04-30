@@ -28,8 +28,13 @@
             echo "<table>\n";
             while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
                 echo "<tr>";
+                echo "<td> Order number::</td>";
+                echo "<td>".$row['ID'];
+                echo "</tr>";
+
+                echo "<tr>";
                 echo "<td> Name:</td>";
-                echo "<td>".$row['first_name']." ".$row['last_name']."<br>";
+                echo "<td>".$row['first_name']." ".$row['last_name'];
                 echo "</tr>";
 
                 echo "<tr>";
