@@ -122,7 +122,7 @@ function checkPhone(phoneNumber)
 
 function checkAddress(address)
 {
-	var regex = /^([0-9])+\ +([a-zA-Z])*/;
+	var regex = /^([0-9])+ +([a-zA-Z])*/;
 	return regex.test(address);
 }
 
