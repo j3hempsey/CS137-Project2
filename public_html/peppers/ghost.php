@@ -1,9 +1,7 @@
-<?php
-    require_once "../php/form.php"
-?>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Peter Sells Peppers - Assorted Peppers</title>
+        <title>Peter Sells Peppers - Ghost Pepper</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../stylesheets/home.css">
@@ -14,7 +12,7 @@
     </head>
     <body>
         <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">Assorted Peppers</h2>
+        <h2 id="pepper-name">Ghost Pepper</h2>
 		<hr>
         <div class='prod-info'>
             <div class='float-img inline'>
@@ -23,24 +21,24 @@
                         <tr>
                             <td>
                                 <div class='product-img'>
-                                <img src='../images/assorted_pepper.png' alt='Guantanamo Pepper'
+                                <img src='../images/ghost_pepper.png' alt='Guantanamo Pepper'
                      height="180" width="300" >
                                 </div>
                                 <div class='product-img'>
-                <img src='../images/assorted_pepper1.jpeg' alt='Guantanamo Pepper'
-                    height="180" width="300" >
+                <img src='../images/ghost_pepper1.png' alt='Guantanamo Pepper'
+                     height="180" width="300" > 
                                 </div>
                                 </td>
                         </tr>
                     </tbody>
-                </table>
+                </table>   
             </div>
             <div class="prod-detail inline">
                 <div class='description'>
-                So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.
+                Bloodshot eyes, red face, finish it or be a disgrace! These spooky peppers will scare you with it's spiciness. A spicy flavor that is not of this world!
                             </div>
-            <div class='price'>
-                Price: $4.99
+            <div class='price'> 
+                Price: $4999.99
             </div>
             </div>
         </div>
@@ -123,7 +121,7 @@
                 </div>
             </form>
         </div>
-
+        
         <br><br>
                 <div class='center-div' id='management' >
                     <a href='../management/management.html'>Management Team</a> | <a href='/index.html'>Home</a>

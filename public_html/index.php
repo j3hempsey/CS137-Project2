@@ -11,10 +11,6 @@
         <h1>Peter sells peppers</h1>
 	<div class="subtitle-div">
 		Suppliers of the universe's best peppers money can buy.
-
-                <? php
-                    echo "dicks";
-                ?>
 	</div>
         <a href='management/management.html'>
             <div class='center-div' id='management'>

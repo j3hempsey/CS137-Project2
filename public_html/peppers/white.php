@@ -1,9 +1,7 @@
-<?php
-    require_once "../php/form.php"
-?>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Peter Sells Peppers - Assorted Peppers</title>
+        <title>Peter Sells Peppers - White Pepper</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../stylesheets/home.css">
@@ -14,7 +12,7 @@
     </head>
     <body>
         <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">Assorted Peppers</h2>
+        <h2  id="pepper-name">White Pepper</h2>
 		<hr>
         <div class='prod-info'>
             <div class='float-img inline'>
@@ -23,24 +21,24 @@
                         <tr>
                             <td>
                                 <div class='product-img'>
-                                <img src='../images/assorted_pepper.png' alt='Guantanamo Pepper'
+                                <img src='../images/white_pepper.jpg' alt='Guantanamo Pepper'
                      height="180" width="300" >
                                 </div>
                                 <div class='product-img'>
-                <img src='../images/assorted_pepper1.jpeg' alt='Guantanamo Pepper'
-                    height="180" width="300" >
+                <img src='../images/white_pepper1.jpg' alt='Guantanamo Pepper'
+                     cheight="180" width="300" > 
                                 </div>
                                 </td>
                         </tr>
                     </tbody>
-                </table>
+                </table>   
             </div>
             <div class="prod-detail inline">
                 <div class='description'>
-                So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.
-                            </div>
-            <div class='price'>
-                Price: $4.99
+                As hot as the spots on the sun. Measure more than 5,800 Kevlin this is the hottest known pepper on the sun! You could use this pepper to power the world's solar energy!
+                 </div>
+            <div class='price'> 
+                Price: $29.99
             </div>
             </div>
         </div>
@@ -123,7 +121,7 @@
                 </div>
             </form>
         </div>
-
+        
         <br><br>
                 <div class='center-div' id='management' >
                     <a href='../management/management.html'>Management Team</a> | <a href='/index.html'>Home</a>
