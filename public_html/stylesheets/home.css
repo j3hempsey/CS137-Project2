@@ -163,8 +163,8 @@ table.ship-form tbody tr td{
 
 .overlay {
 	position: absolute;
-	bottom: 0;
-	right: 0;
+	bottom: 85;
+	right: 55;
 }
 
 .order {

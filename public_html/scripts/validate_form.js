@@ -49,13 +49,13 @@ function checkAddressWhileTyping()
 
 function checkPhoneWhileTyping()
 {
-  if(checkPhone(document.getElementById("last-name").value)) {
+  if(checkPhone(document.getElementById("phone").value)) {
   	$("#phone-good").addClass('hidden');
 	$("#phone-bad").removeClass('hidden');
   }
   else {
     $("#phone-good").removeClass('hidden');
-	$("#phonee-bad").addClass('hidden');
+	$("#phone-bad").addClass('hidden');
   }
 }
 
@@ -205,11 +205,13 @@ function processForm()
 		alert(error_message);
         return false;
 	}
- 	
+ /* Keeping this as reference in case php needs it.	
 	var pepperName = document.getElementById("pepper-name");
 	window.location.href = "mailto:peterspepper@peterspepper.com?subject=" + "My Pepper Order" + 
 	"&body=Get me " + quantity.value + " " + pepperName.innerHTML + "!%0A%0A Send To: %0A" + first_name.value + " " + last_name.value + "%0A" + address.value + "%0A" + state.value + " " + zip.value;
 	$('#order-form').submit();
+    */
+
 }
 
 var form = document.getElementById("order-form");
