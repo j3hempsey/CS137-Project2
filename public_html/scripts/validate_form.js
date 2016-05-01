@@ -129,7 +129,7 @@ function checkAddress(address)
 function checkZip(zip)
 {
 	var regex = /^([0-9])/;
-	return (regex.test(zip) && zip.length == 5);
+	return (regex.test(zip) && zip.length < 6); //Turns out there are shorter zip codes in US.
 }
 
 function checkState(state)

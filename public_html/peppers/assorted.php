@@ -11,6 +11,7 @@
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 		<script type="text/javascript" src="../scripts/validate_form.js"></script>
 		<script src="../scripts/jquery_2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/autocomplete.js"></script>	
     </head>
     <body>
         <h1>Peter sells peppers</h1>
@@ -87,16 +88,18 @@
                         </tr>
                         <tr>
                             <td>Zip code:</td>
-                            <td><input type="text" class="in_txt" id="zip-code" name="zip_code" onkeyup="checkZipCodeWhileTyping()">
+                            <td><input list="zip-results" type="text" class="in_txt" id="zip-code" onkeyup="checkZipCodeWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="zip-code-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="zip-code-bad"></img>
+                            <datalist id="zip-results"></datalist>
 							</td>
                         </tr>
                         <tr>
                             <td>State:</td>
-                            <td><input type="text" class="in_txt" id="state" name="state" onkeyup="checkStateWhileTyping()">
+                            <td><input list="state-results" type="text" class="in_txt" id="state" onkeyup="checkStateWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="state-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="state-bad"></img>
+                            <datalist id="state-results"></datalist>
 							</td>
                         </tr>
                         <tr>
