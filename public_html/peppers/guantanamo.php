@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 		<script type="text/javascript" src="../scripts/validate_form.js"></script>
-		<script src="../scripts/jquery_2.2.3.min.js"></script>		
+		<script src="../scripts/jquery_2.2.3.min.js"></script>
     </head>
     <body>
         <h1>Peter sells peppers</h1>
@@ -25,18 +25,18 @@
                                 </div>
                                 <div class='product-img'>
 								<img src='../images/guan-pepper1.jpg' alt='Guantanamo Pepper'
-                     height="180" width="300" > 
+                     height="180" width="300" >
                                 </div>
                         </tr>
                      </td>
                     </tbody>
-                </table>   
+                </table>
             </div>
             <div class="prod-detail inline">
                 <div class='description'>
                 Have you ever ate something so hot that you ended in a US military prision? Well if you haven't this could be your only chance.
             </div>
-            <div class='price'> 
+            <div class='price'>
                 Price: $1,000,000
             </div>
             </div>
@@ -44,7 +44,7 @@
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();' action="../php/form.php">
-                <input type="hidden" name="action" value="buy"/>
+                <!-- <input type="hidden" name="action" value="buy"/> -->
                 <table class='ship-form'>
                     <tbody>
                         <tr>
@@ -120,7 +120,7 @@
                 </div>
             </form>
         </div>
-        
+
         <br><br>
                 <div class='center-div' id='management' >
                     <a href='../management/management.html'>Management Team</a> | <a href='/index.html'>Home</a>
