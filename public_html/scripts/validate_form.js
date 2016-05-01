@@ -252,6 +252,21 @@ function processForm()
 		alert(error_message);
         return false;
 	}
+	
+	var data = $('#order-form').serialize();
+	$.ajax({
+  type: "POST",
+  url: "/php/form.php",
+  data: data,
+  success: function(id){
+			if(id != -1){
+				window.location.href = "/php/confirm.php?id=" + id;
+			} else {
+			}
+		},
+});
+
+return false;
  /* Keeping this as reference in case php needs it.	
 	var pepperName = document.getElementById("pepper-name");
 	window.location.href = "mailto:peterspepper@peterspepper.com?subject=" + "My Pepper Order" + 
@@ -261,5 +276,5 @@ function processForm()
 
 }
 
-var form = document.getElementById("order-form");
+var form = $("#order-form");
 form.onSubmit = processForm;

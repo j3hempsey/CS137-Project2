@@ -27,19 +27,9 @@ try {
         $order->quantity = $quantity;
         $order->ship = $ship;
         
-        echo $order->pepper_id, PHP_EOL; 
-        echo $order->first_name, PHP_EOL;
-        echo $order->last_name, PHP_EOL;
-        echo $order->credit_card, PHP_EOL;
-        echo $order->address, PHP_EOL;
-        echo $order->phone, PHP_EOL;
-        echo $order->zip_code, PHP_EOL;
-        echo $order->state, PHP_EOL;
-        echo $order->quantity, PHP_EOL;
-        echo $order->ship, PHP_EOL;
-        
         $ordersRepository = new OrdersRepository;
-        $ordersRepository->createOrder($order);
+        $orderId = $ordersRepository->createOrder($order);
+        echo $orderId;
 } catch(PDOException $e) {
     echo "ERROR: Could not process order." . $e->getMessage();
 }
