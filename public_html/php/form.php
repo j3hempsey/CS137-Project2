@@ -35,6 +35,6 @@ try {
         $ordersRepository = new OrdersRepository;
         $ordersRepository->createOrder($order);
 } catch(PDOException $e) {
-    echo "ERROR: Could not process order.";
+    echo "ERROR: Could not process order." . $e->getMessage();
 }
 ?>
