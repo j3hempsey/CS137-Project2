@@ -31,6 +31,7 @@ try {
         $order->state = $state;
         $order->quantity = $quantity;
         $order->ship = $ship;
+        echo $order;
         
         $ordersRepository = new OrdersRepository;
         $ordersRepository->createOrder($order);
