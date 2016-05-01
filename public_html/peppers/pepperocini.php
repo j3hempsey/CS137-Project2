@@ -86,7 +86,7 @@
                         </tr>
                         <tr>
                             <td>Zip code:</td>
-                            <td><input list="zip-results" type="text" class="in_txt" id="zip-code" onkeyup="checkZipCodeWhileTyping()">
+                            <td><input list="zip-results" type="text" class="in_txt" id="zip-code" name="zip_code" onkeyup="checkZipCodeWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="zip-code-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="zip-code-bad"></img>
                             <datalist id="zip-results"></datalist>
