@@ -261,7 +261,7 @@ function processForm()
   data: data,
   success: function(id){
 			if(id != -1){
-				$.post("/php/confirm.php", { 'id' : id });
+				window.location.href = "/php/confirm.php?id=" + id;
 			} else {
 			}
 		},
