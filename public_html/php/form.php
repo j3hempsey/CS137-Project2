@@ -27,15 +27,16 @@ try {
         $order->quantity = $quantity;
         $order->ship = $ship;
         
-        echo $first_name;
-        echo $last_name;
-        echo $credit_card;
-        echo $address;
-        echo $phone;
-        echo $zip_code;
-        echo $state;
-        echo $quantity;
-        echo $ship;
+        echo $order->pepper_id;
+        echo $order->first_name;
+        echo $order->last_name;
+        echo $order->credit_card;
+        echo $order->address;
+        echo $order->phone;
+        echo $order->zip_code;
+        echo $order->state;
+        echo $order->quantity;
+        echo $order->ship;
         
         $ordersRepository = new OrdersRepository;
         $ordersRepository->createOrder($order);
