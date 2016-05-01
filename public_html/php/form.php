@@ -28,7 +28,8 @@ try {
         $order->ship = $ship;
         
         $ordersRepository = new OrdersRepository;
-        $ordersRepository->createOrder($order);
+        $orderId = $ordersRepository->createOrder($order);
+        echo $orderId;
 } catch(PDOException $e) {
     echo "ERROR: Could not process order." . $e->getMessage();
 }
