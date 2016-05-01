@@ -7,8 +7,8 @@
         <link rel="stylesheet" type="text/css" href="../stylesheets/home.css">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-		<script type="text/javascript" src="../scripts/validate_form.js"></script>
 		<script src="../scripts/jquery_2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/validate_form.js"></script>
 		<script type="text/javascript" src="../scripts/autocomplete.js"></script>
     </head>
     <body>
