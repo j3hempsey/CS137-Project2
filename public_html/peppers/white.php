@@ -94,7 +94,7 @@
                         </tr>
                         <tr>
                             <td>State:</td>
-                            <td><input list="state-results" type="text" class="in_txt" id="state" onkeyup="checkStateWhileTyping()">
+                            <td><input list="state-results" type="text" class="in_txt" id="state" name="state" onkeyup="checkStateWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="state-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="state-bad"></img>
                             <datalist id="state-results"></datalist>
