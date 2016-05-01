@@ -14,7 +14,7 @@
                 return $orderId;
             } catch(PDOException $e) {
                 $conn->rollback(); 
-                print "Error!: " . $e->getMessage() . "</br>"; 
+                echo "Error!: " . $e->getMessage() . "</br>"; 
             }
             
             //$sql = "INSERT INTO orders (first_name, last_name, cc_number, street_addr, phone_num, zip, state, pepper_id, quantity, ship_speed)" .
