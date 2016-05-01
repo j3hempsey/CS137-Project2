@@ -266,6 +266,8 @@ function processForm()
 			}
 		},
 });
+
+return false;
  /* Keeping this as reference in case php needs it.	
 	var pepperName = document.getElementById("pepper-name");
 	window.location.href = "mailto:peterspepper@peterspepper.com?subject=" + "My Pepper Order" + 
