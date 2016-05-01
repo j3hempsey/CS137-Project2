@@ -46,7 +46,7 @@
         </div>
         <div class='order'>
 			<hr>
-            <form method='post' id='order-form' onsubmit='return processForm();' action="../php/form.php">
+            <form method='post' id='order-form' onsubmit='return processForm();'>
                 <input type="hidden" name="pepper_id" value="6"/>
                 <table class='ship-form'>
                     <tbody>
