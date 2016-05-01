@@ -11,7 +11,7 @@
         <h1>Peter sells peppers</h1>
         <h2>Order Confirmation</h2>
 <?php
-    $confirm_id = htmlspecialchars($_GET["id"]);
+    $confirm_id = htmlspecialchars($_POST["id"]);
     $servername = "sylvester-mccoy-v3.ics.uci.edu";
     $db="inf124grp13";
     $username = "inf124grp13";
