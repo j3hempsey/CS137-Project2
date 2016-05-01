@@ -31,7 +31,16 @@ try {
         $order->state = $state;
         $order->quantity = $quantity;
         $order->ship = $ship;
-        echo $order;
+        
+        echo $first_name;
+        echo $last_name;
+        echo $credit_card;
+        echo $address;
+        echo $phone;
+        echo $zip_code;
+        echo $state;
+        echo $quantity;
+        echo $ship;
         
         $ordersRepository = new OrdersRepository;
         $ordersRepository->createOrder($order);
