@@ -2,11 +2,6 @@
 require 'Models/Order.php';
 require 'Repositories/OrdersRepository.php';
 
-$servername = "sylvester-mccoy-v3.ics.uci.edu";
-$db="inf124grp13";
-$username = "inf124grp13";
-$password = "4a=eDuVu";
-
 try {
     //Add to sql table
         $pepper_id = $_POST['pepper_id'];
