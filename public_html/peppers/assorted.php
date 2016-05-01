@@ -1,6 +1,3 @@
-<?php
-    require_once "../php/form.php"
-?>
 <html>
     <head>
         <title>Peter Sells Peppers - Assorted Peppers</title>
