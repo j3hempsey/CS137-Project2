@@ -1,3 +1,51 @@
+//Timer in case user uses autofill or some other weird format.
+function updateChecks() 
+{
+    if(!isDocumentElementEmpty("first-name"))
+    {
+        checkFirstNameWhileTyping();
+    }
+    if(!isDocumentElementEmpty("last-name"))
+    {
+    	checkLastNameWhileTyping();
+    }
+	if(!isDocumentElementEmpty("credit-card"))
+    {
+		checkCreditCardWhileTyping();
+	}
+	if(!isDocumentElementEmpty("address"))
+    {
+		checkAddressWhileTyping();
+	}
+	if(!isDocumentElementEmpty("zip-code"))
+    {
+		checkZipCodeWhileTyping();
+	}
+	if(!isDocumentElementEmpty("state"))
+    {
+		checkStateWhileTyping();
+	}
+	if(!isDocumentElementEmpty("quantity"))
+    {
+		checkQuantityWhileTyping();
+	}
+	if(!isDocumentElementEmpty("phone"))
+    {
+		checkPhoneWhileTyping();
+	}
+}
+
+var UPDATE_RATE = 500;
+var run = setInterval(function() { updateChecks() }, UPDATE_RATE); //Set interval.
+
+function isDocumentElementEmpty(name)
+{
+    if(document.getElementById(name).value == "")
+        return true;
+    else
+        return false;
+}
+
 //Input listeners.
 function checkFirstNameWhileTyping()
 {
