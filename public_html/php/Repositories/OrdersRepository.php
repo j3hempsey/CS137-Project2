@@ -8,8 +8,8 @@
             try{
                 $conn->beginTransaction();
                 $stmt->execute(array($order->first_name, $order->last_name, $order->credit_card, $order->address, $order->phone, $order->zip_code, $order->state, $order->pepper_id, $order->quantity, $order->ship));
-                $conn->commit();
                 $orderId = $conn->lastInsertId();
+                $conn->commit();
                 
                 return $orderId;
             } catch(PDOException $e) {
