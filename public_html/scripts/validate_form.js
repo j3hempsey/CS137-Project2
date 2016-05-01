@@ -275,5 +275,5 @@ function processForm()
 
 }
 
-var form = document.getElementById("order-form");
+var form = $("#order-form");
 form.onSubmit = processForm;
