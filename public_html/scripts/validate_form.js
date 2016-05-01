@@ -35,8 +35,7 @@ function updateChecks()
 	}
 }
 
-var UPDATE_RATE = 500;
-var run = setInterval(function() { updateChecks() }, UPDATE_RATE); //Set interval.
+var run = setInterval(function() { updateChecks() }, 500); //Set interval.
 
 function isDocumentElementEmpty(name)
 {
