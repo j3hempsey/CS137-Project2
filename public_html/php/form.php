@@ -9,7 +9,9 @@ try {
         $last_name = $_POST['last_name'];
         $credit_card = $_POST['credit_card'];
         $address = $_POST['address'];
-        $phone = $_POST['phone'];
+        //Dashes are null terminated for the _POST, need to preprocess.
+        $phone_val = $_POST['phone'];
+        $phone = str_replace("-", "", $phone_val);
         $zip_code = $_POST['zip_code'];
         $state = $_POST['state'];
         $quantity = $_POST['quantity'];
