@@ -12,7 +12,7 @@
     }
     else
     {
-        $query = "SELECT DISTINCT state FROM `zipcodes` WHERE state like '" . $arg . "%' LIMIT 0, 100";
+        $query = "SELECT DISTINCT state FROM `zipcodes` WHERE state like '" . $arg . "%' LIMIT 0, 50";
         foreach($conn->query($query) as $column)
         {
             print "<option value=";
