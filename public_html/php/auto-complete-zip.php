@@ -12,7 +12,7 @@
     }
     else
     {
-        $query = "SELECT zip FROM `zipcodes` WHERE zip like '" . $arg . "%' LIMIT 0, 100";
+        $query = "SELECT zip FROM `zipcodes` WHERE zip like '" . $arg . "%' LIMIT 0, 10";
         foreach($conn->query($query) as $column)
         {
             print "<option value=";
