@@ -130,6 +130,13 @@ table.ship-form tbody tr td{
     margin-right: 30px;
 }
 
+.assorted-float-img {
+    width:30%;
+    float: left;
+    margin-right: 30px;
+}
+
+
 .img-preview {
     height:150px;
 }

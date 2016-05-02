@@ -15,11 +15,10 @@
         <h2 id="pepper-name">Assorted Peppers</h2>
 		<hr>
         <div class='prod-info'>
-            <div class='float-img inline'>
+            <div class='assorted-float-img inline'>
                 <table>
                     <tbody>
                         <tr>
-                            <td>
                                 <div class='product-img'>
                                 <img src='../images/assorted_pepper.png' alt='Guantanamo Pepper'
                      height="180" width="300" >
@@ -28,7 +27,6 @@
                 <img src='../images/assorted_pepper1.jpeg' alt='Guantanamo Pepper'
                     height="180" width="300" >
                                 </div>
-                                </td>
                         </tr>
                     </tbody>
                 </table>
@@ -36,7 +34,7 @@
             <div class="prod-detail inline">
                 <div class='description'>
                 So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.
-                            </div>
+            </div>
             <div class='price'>
                 Price: $4.99
             </div>
