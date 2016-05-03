@@ -35,15 +35,15 @@
             $result = $conn->query($sql);
     
             if ($result->num_rows > 0) {
-                echo "<table class='home-table'>";
-                echo "<thead>
+                echo "<table class='home-table'>
+                    <thead>
                     <td>Image</td>
                     <td>Pepper Name</td>
                     <td>Pepper Type</td>
                     <td>Spicy-ness</td>
                     <td>Price</td>
-                    </thead>";
-                echo "<tbody>";
+                    </thead>
+                    <tbody>";
                 // output data of each row
                 while($row = $result->fetch_assoc())
                 {
