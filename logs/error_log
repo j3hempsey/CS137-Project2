@@ -1137,3 +1137,4 @@
 [Mon May 02 14:55:38 2016] [error] [client 169.234.112.8] PHP Notice:  Undefined property: PDO::$connect_error in /home/gentryj/137/P2/public_html/php/auto-complete-zip.php on line 10, referer: http://andromeda-13.ics.uci.edu:8888/peppers/guantanamo.php
 [Mon May 02 20:46:06 2016] [error] [client 128.195.67.89] File does not exist: /home/gentryj/137/P2/public_html/favicon.ico
 [Mon May 02 20:46:06 2016] [error] [client 128.195.67.89] File does not exist: /home/gentryj/137/P2/public_html/favicon.ico
+[Mon May 02 23:02:01 2016] [error] [client 128.195.70.140] File does not exist: /home/gentryj/137/P2/public_html/index.html
