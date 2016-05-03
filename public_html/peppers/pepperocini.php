@@ -28,7 +28,7 @@
             $sql = "SELECT * FROM  `peppers` WHERE ID=4";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
-            $pepper_name = $row['pepper_name'];
+            $pepper_type = $row['pepper_type'];
             $image_url = $row['image_url'];
             $image_url_alt = $row['image_url_alt'];
             $description = $row['description'];
@@ -37,7 +37,7 @@
 
             echo "
                 <h1>Peter sells peppers</h1>
-                <h2 id='pepper-name'>".$pepper_name."</h2>
+                <h2 id='pepper-name'>".$pepper_type."</h2>
                 <div class='prod-info'>
                 <hr>
                     <div class='float-img inline'>
@@ -45,11 +45,11 @@
                             <tbody>
                                 <tr>
                                         <div class='product-img'>
-                                        <img src='../".$image_url."' alt='".$pepper_name."'
+                                        <img src='../".$image_url."' alt='".$pepper_type."'
                              height='180' width='300' > </td>
                                         </div>
                                         <div class='product-img'>
-                                        <img src='../".$image_url_alt."' alt='".$pepper_name."'
+                                        <img src='../".$image_url_alt."' alt='".$pepper_type."'
                              height='180' width='300' >
                                         </div>
                                 </tr>
@@ -77,14 +77,14 @@
                     <tbody>
                         <tr>
                             <td>First Name:</td>
-                            <td><input type="text" class="in_txt" id="first-name" name="first_name" onkeyup="checkFirstNameWhileTyping()">
+                            <td><input type="text" class="in_txt" id="first-name" name="first_type" onkeyup="checkFirstNameWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="first-name-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="first-name-bad"></img>
                         </td>
                         </tr>
                         <tr>
                             <td>Last Name:</td>
-                            <td><input type="text" class="in_txt" id="last-name" name="last_name" onkeyup="checkLastNameWhileTyping()">
+                            <td><input type="text" class="in_txt" id="last-name" name="last_type" onkeyup="checkLastNameWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="last-name-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="last-name-bad"></img>
 							</td>
