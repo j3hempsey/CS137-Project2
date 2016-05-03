@@ -12,36 +12,62 @@
 		<script type="text/javascript" src="../scripts/autocomplete.js"></script>
     </head>
     <body>
-        <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">The Guantanamo Pepper</h2>
-        <div class='prod-info'>
-		<hr>
-            <div class='float-img inline'>
-                <table>
-                    <tbody>
-                        <tr>
-                                <div class='product-img'>
-                                <img src='../images/guan-pepper.jpg' alt='Guantanamo Pepper'
-                     height="180" width="300" > </td>
-                                </div>
-                                <div class='product-img'>
-								<img src='../images/guan-pepper1.jpg' alt='Guantanamo Pepper'
-                     height="180" width="300" >
-                                </div>
-                        </tr>
-                     </td>
-                    </tbody>
-                </table>
-            </div>
-            <div class="prod-detail inline">
-                <div class='description'>
-                Have you ever ate something so hot that you ended in a US military prision? Well if you haven't this could be your only chance.
-            </div>
-            <div class='price'>
-                Price: $1,000,000
-            </div>
-            </div>
-        </div>
+        <?php
+            $servername = "sylvester-mccoy-v3.ics.uci.edu";
+            $db="inf124grp13";
+            $username = "inf124grp13";
+            $password = "4a=eDuVu";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $db);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            // echo "Connected successfully";
+            $sql = "SELECT * FROM  `peppers` WHERE ID=1";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $pepper_name = $row['pepper_name'];
+            $image_url = $row['image_url'];
+            $image_url_alt = $row['image_url_alt'];
+            $description = $row['description'];
+            $price = $row['price'];
+
+
+            echo "
+                <h1>Peter sells peppers</h1>
+                <h2 id='pepper-name'>".$pepper_name."</h2>
+                <div class='prod-info'>
+        		<hr>
+                    <div class='float-img inline'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url."' alt='".$pepper_name."'
+                             height='180' width='300' > </td>
+                                        </div>
+                                        <div class='product-img'>
+        								<img src='../".$image_url_alt."' alt='".$pepper_name."'
+                             height='180' width='300' >
+                                        </div>
+                                </tr>
+                             </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='prod-detail inline'>
+                        <div class='description'>".$description."
+                    </div>
+                    <div class='price'>
+                        Price: $".$price."
+                    </div>
+                    </div>
+                </div>
+            ";
+            $conn->close();
+        ?>
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();'>
