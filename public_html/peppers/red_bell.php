@@ -12,37 +12,63 @@
 		<script type="text/javascript" src="../scripts/autocomplete.js"></script>			
     </head>
     <body>
-        <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">Red Bell Pepper</h2>
-		<hr>
-        <div class='prod-info'>
-            <div class='float-img inline'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class='product-img'>
-                                <img src='../images/red_bell_pepper.png' alt='Guantanamo Pepper'
-                     height="180" width="300" >
-                                </div>
-                                <div class='product-img'>
-                <img src='../images/red_bell_pepper1.jpg' alt='Guantanamo Pepper'
-                     height="180" width="300" > 
-                                </div>
-                                </td>
-                        </tr>
-                    </tbody>
-                </table>   
-            </div>
-            <div class="prod-detail inline">
-                <div class='description'>
-                A baby could eat this. If you're reading this we're going to assume that you're a baby, because this pepper is meant for babies! Goo Goo Gaa Gaa!
+        <?php
+            $servername = "sylvester-mccoy-v3.ics.uci.edu";
+            $db="inf124grp13";
+            $username = "inf124grp13";
+            $password = "4a=eDuVu";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $db);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            // echo "Connected successfully";
+            $sql = "SELECT * FROM  `peppers` WHERE ID=7";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $pepper_type = $row['pepper_type'];
+            $image_url = $row['image_url'];
+            $image_url_alt = $row['image_url_alt'];
+            $description = $row['description'];
+            $price = $row['price'];
+
+
+            echo "
+                <h1>Peter sells peppers</h1>
+                <h2 id='pepper-name'>".$pepper_type."</h2>
+                <div class='prod-info'>
+                <hr>
+                    <div class='float-img inline'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url."' alt='".$pepper_type."'
+                             height='180' width='300' > </td>
+                                        </div>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url_alt."' alt='".$pepper_type."'
+                             height='180' width='300' >
+                                        </div>
+                                </tr>
+                             </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='prod-detail inline'>
+                        <div class='description'>".$description."
+                    </div>
+                    <div class='price'>
+                        Price: $".$price."
+                    </div>
+                    </div>
                 </div>
-            <div class='price'> 
-                Price: $9.99
-            </div>
-            </div>
-        </div>
+            ";
+            $conn->close();
+        ?>
+
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();'>
@@ -51,14 +77,14 @@
                     <tbody>
                         <tr>
                             <td>First Name:</td>
-                            <td><input type="text" class="in_txt" id="first-name" name="first_name" onkeyup="checkFirstNameWhileTyping()">
+                            <td><input type="text" class="in_txt" id="first-name" name="first_type" onkeyup="checkFirstNameWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="first-name-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="first-name-bad"></img>
                         </td>
                         </tr>
                         <tr>
                             <td>Last Name:</td>
-                            <td><input type="text" class="in_txt" id="last-name" name="last_name" onkeyup="checkLastNameWhileTyping()">
+                            <td><input type="text" class="in_txt" id="last-name" name="last_type" onkeyup="checkLastNameWhileTyping()">
 							<img src="../images/red_x.gif" alt="Error!" style="width: 20px; height: 20px;" class="hidden" id="last-name-good"></img>
 							<img src="../images/green_check.png" alt="Success!" style="width: 20px; height: 20px;" class="hidden" id="last-name-bad"></img>
 							</td>
