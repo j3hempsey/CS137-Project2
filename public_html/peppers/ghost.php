@@ -12,37 +12,62 @@
 		<script type="text/javascript" src="../scripts/autocomplete.js"></script>	
     </head>
     <body>
-        <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">Ghost Pepper</h2>
-		<hr>
-        <div class='prod-info'>
-            <div class='float-img inline'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class='product-img'>
-                                <img src='../images/ghost_pepper.png' alt='Guantanamo Pepper'
-                     height="180" width="300" >
-                                </div>
-                                <div class='product-img'>
-                <img src='../images/ghost_pepper1.png' alt='Guantanamo Pepper'
-                     height="180" width="300" > 
-                                </div>
-                                </td>
-                        </tr>
-                    </tbody>
-                </table>   
-            </div>
-            <div class="prod-detail inline">
-                <div class='description'>
-                Bloodshot eyes, red face, finish it or be a disgrace! These spooky peppers will scare you with it's spiciness. A spicy flavor that is not of this world!
-                            </div>
-            <div class='price'> 
-                Price: $4999.99
-            </div>
-            </div>
-        </div>
+        <?php
+            $servername = "sylvester-mccoy-v3.ics.uci.edu";
+            $db="inf124grp13";
+            $username = "inf124grp13";
+            $password = "4a=eDuVu";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $db);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            // echo "Connected successfully";
+            $sql = "SELECT * FROM  `peppers` WHERE ID=3";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $pepper_name = $row['pepper_name'];
+            $image_url = $row['image_url'];
+            $image_url_alt = $row['image_url_alt'];
+            $description = $row['description'];
+            $price = $row['price'];
+
+
+            echo "
+                <h1>Peter sells peppers</h1>
+                <h2 id='pepper-name'>".$pepper_name."</h2>
+                <div class='prod-info'>
+                <hr>
+                    <div class='float-img inline'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url."' alt='".$pepper_name."'
+                             height='180' width='300' > </td>
+                                        </div>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url_alt."' alt='".$pepper_name."'
+                             height='180' width='300' >
+                                        </div>
+                                </tr>
+                             </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='prod-detail inline'>
+                        <div class='description'>".$description."
+                    </div>
+                    <div class='price'>
+                        Price: $".$price."
+                    </div>
+                    </div>
+                </div>
+            ";
+            $conn->close();
+        ?>
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();'>
