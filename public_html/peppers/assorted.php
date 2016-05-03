@@ -11,35 +11,62 @@
 		<script type="text/javascript" src="../scripts/autocomplete.js"></script>	
     </head>
     <body>
-        <h1>Peter sells peppers</h1>
-        <h2 id="pepper-name">Assorted Peppers</h2>
-		<hr>
-        <div class='prod-info'>
-            <div class='assorted-float-img inline'>
-                <table>
-                    <tbody>
-                        <tr>
-                                <div class='product-img'>
-                                <img src='../images/assorted_pepper.png' alt='Guantanamo Pepper'
-                     height="180" width="300" >
-                                </div>
-                                <div class='product-img'>
-                <img src='../images/assorted_pepper1.jpeg' alt='Guantanamo Pepper'
-                    height="180" width="300" >
-                                </div>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="prod-detail inline">
-                <div class='description'>
-                So mild, it'll drive you wild. These assorted peppers will change the way you view peppers. This pepper pack includes assorted peppers that rate above 9000 in the HTH (Hotter than Hell) Index.
-            </div>
-            <div class='price'>
-                Price: $4.99
-            </div>
-            </div>
-        </div>
+        <?php
+            $servername = "sylvester-mccoy-v3.ics.uci.edu";
+            $db="inf124grp13";
+            $username = "inf124grp13";
+            $password = "4a=eDuVu";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $db);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            // echo "Connected successfully";
+            $sql = "SELECT * FROM  `peppers` WHERE ID=2";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $pepper_name = $row['pepper_name'];
+            $image_url = $row['image_url'];
+            $image_url_alt = $row['image_url_alt'];
+            $description = $row['description'];
+            $price = $row['price'];
+
+
+            echo "
+                <h1>Peter sells peppers</h1>
+                <h2 id='pepper-name'>".$pepper_name."</h2>
+                <div class='prod-info'>
+                <hr>
+                    <div class='float-img inline'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url."' alt='".$pepper_name."'
+                             height='180' width='300' > </td>
+                                        </div>
+                                        <div class='product-img'>
+                                        <img src='../".$image_url_alt."' alt='".$pepper_name."'
+                             height='180' width='300' >
+                                        </div>
+                                </tr>
+                             </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='prod-detail inline'>
+                        <div class='description'>".$description."
+                    </div>
+                    <div class='price'>
+                        Price: $".$price."
+                    </div>
+                    </div>
+                </div>
+            ";
+            $conn->close();
+        ?>
         <div class='order'>
 		<hr>
             <form method='post' id='order-form' onsubmit='return processForm();'>
